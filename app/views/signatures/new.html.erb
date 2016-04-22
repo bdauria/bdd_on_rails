@@ -1,0 +1,7 @@
+<h1>Here comes the Lorem!</h1>
+<p><%= Forgery('lorem_ipsum').paragraphs(1) %></p>
+
+<%= form_for @signature do |f| %>
+  Signature: <%= f.text_field :name, id: :signature %>
+<%= submit_tag 'Submit' %>
+<% end %>

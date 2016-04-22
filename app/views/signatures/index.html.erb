@@ -1,0 +1,16 @@
+<% if @signature && @signature.errors.any? %>
+  <h2>Error during the signature:</h2>
+  <ul>
+  <% @signature.errors.each do |attr, msg| %>
+    <li><%= msg %></li>
+  <% end %>
+  </ul>
+<%end %>
+<h1> Signatures </h1>
+<ul>
+  <% @signatures.each do |s| %>
+    <li> <%= s.name %></li>
+<%end %>
+</ul>
+<h1>Sign the Lorem</h1>
+<%= link_to 'Take me to lorem', lorem_ipsum_path %>
